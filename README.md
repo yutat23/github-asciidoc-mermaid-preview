@@ -10,7 +10,7 @@ GitHub 上の AsciiDoc プレビューで、`link:path/to/file.mmd[role=include]
 
 > [!IMPORTANT] 
 > **PATを設定することを強く推奨します。**  
-> [**>>設定方法はこちら<<**](##PATの取得と設定方法)  
+> [**>>設定方法はこちら<<**](#PATの取得と設定方法)  
 > PATを設定しないとGitHub APIのレート制限により同一IPアドレスでの認証されていないAPI利用が制限されます（同じネットワークの人に迷惑かかるかもってことです）。
 > 詳しくは[REST API のレート制限](https://docs.github.com/ja/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28)を参照してください。
 
