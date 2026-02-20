@@ -1,0 +1,13 @@
+= Mermaid埋め込みサンプル
+
+## MermaidをInclude
+
+[mermaid]
+....
+include::mmd/iikanji.mmd[]
+....
+
+
+## 結論
+
+超超超いい感じ超超超超いい感じ
