@@ -1,0 +1,16 @@
+{
+  "name": "github-asciidoc-mermaid-preview",
+  "version": "1.0.0",
+  "description": "GitHub AsciiDoc preview: render embedded Mermaid diagrams from link:path.mmd[role=include]",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "mermaid": "^10.9.0"
+  }
+}
