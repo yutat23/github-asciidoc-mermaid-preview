@@ -1,6 +1,6 @@
 # GitHub AsciiDoc Mermaid Preview
 
-GitHub 上の AsciiDoc プレビューで、`link:path/to/file.mmd[role=include]` または `link:path/to/file.mermaid[role=include]` 形式で埋め込まれた Mermaid 図を SVG として描画する Chrome 拡張機能です。
+GitHub 上の AsciiDoc プレビューで、`link:path/to/file.mmd[role=include]` または `link:path/to/file.mermaid[role=include]` 形式で埋め込まれた Mermaid 図を SVG として描画する Chrome 拡張機能です
 
 ## 機能
 
