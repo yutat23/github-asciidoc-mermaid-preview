@@ -8,6 +8,13 @@ GitHub 上の AsciiDoc プレビューで、`link:path/to/file.mmd[role=include]
 - 相対パスから `.mmd` または `.mermaid` ファイルを取得し、SVG としてドキュメント内に描画
 - **プライベートリポジトリ対応**: GitHub Personal Access Token (PAT) を設定すると、プライベートリポジトリのファイルも取得可能
 
+> [!IMPORTANT] 
+> **PATを設定することを強く推奨します。**  
+> [**>>設定方法はこちら<<**](##PATの取得と設定方法)  
+> PATを設定しないとGitHub APIのレート制限により同一IPアドレスでの認証されていないAPI利用が制限されます（同じネットワークの人に迷惑かかるかもってことです）。
+> 詳しくは[REST API のレート制限](https://docs.github.com/ja/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28)を参照してください。
+
+
 ## インストール
 
 ### 方法 A: 配布用 ZIP から（推奨）
@@ -45,15 +52,22 @@ npm run package
 2. `link:../../path/to/diagram.mmd[role=include]` や `link:../../path/to/diagram.mermaid[role=include]` のような記述がある場合、自動的に Mermaid 図が SVG で描画される
 3. プライベートリポジトリの場合は、拡張アイコン → 「設定を開く」から GitHub PAT を設定する
 
-## GitHub Personal Access Token (PAT) の取得
+## PATの取得と設定方法
+PAT(Personal Access Token)の取得と設定方法について。
 
 プライベートリポジトリのファイルを取得するには、GitHub の Personal Access Token が必要です。
 
 1. GitHub にログインし、[Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens) を開く
 2. 「Generate new token」をクリック
-3. **Classic** トークンまたは **Fine-grained** トークンを選択
-   - Classic: `repo` スコープにチェック
-   - Fine-grained: 対象リポジトリへの読み取り権限を付与
+3. **Generate new token(classic)** トークンまたは **Generate new token** トークンを選択
+   - Generate new token(classic): 
+     - Note: わかりやすい名前を記入(例: `GitHub AsciiDoc Mermaid Preview`)
+     - Expiration: PATの有効期限を選択
+     - repoにチェック
+   - Generate new token:
+     - Token name: わかりやすい名前を記入(例: `GitHub AsciiDoc Mermaid Preview`)
+     - Expiration: PATの有効期限を選択
+     - Repository access: 対象としたいリポジトリを選択
 4. トークンを生成し、コピーする
 5. 拡張機能のオプションページでトークンを貼り付けて保存
 
@@ -61,7 +75,3 @@ npm run package
 
 - `.mmd` または `.mermaid` ファイルを `link:path/to/file.mmd[role=include]` 形式で埋め込んだ AsciiDoc
 - GitHub の blob ページ（`https://github.com/owner/repo/blob/branch/path/to/file.adoc`）で表示されるプレビュー
-
-## ライセンス
-
-MIT
