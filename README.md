@@ -10,19 +10,34 @@ GitHub 上の AsciiDoc プレビューで、`link:path/to/file.mmd[role=include]
 
 ## インストール
 
-### 1. ビルド
+### 方法 A: 配布用 ZIP から（推奨）
+
+1. 本リポジトリの Releases から `github-asciidoc-mermaid-preview-vX.X.X.zip` をダウンロード
+2. ZIP を解凍する
+3. Chrome で `chrome://extensions/` を開く
+4. 「デベロッパーモード」を有効にする
+5. 「パッケージ化されていない拡張機能を読み込む」をクリック
+6. 解凍したフォルダを選択
+
+### 方法 B: ソースからビルド
 
 ```bash
 npm install
 npm run build
 ```
 
-### 2. Chrome に読み込む
-
 1. Chrome で `chrome://extensions/` を開く
 2. 「デベロッパーモード」を有効にする
 3. 「パッケージ化されていない拡張機能を読み込む」をクリック
 4. プロジェクトの `dist` フォルダを選択
+
+### 配布用 ZIP の作成・GitHub Release 用
+
+```bash
+npm run package
+```
+
+`github-asciidoc-mermaid-preview-v1.0.0.zip` がプロジェクト直下に生成されます。この ZIP を GitHub の Releases にアップロードしてください。
 
 ## 使い方
 

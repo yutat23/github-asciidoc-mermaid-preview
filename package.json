@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "package": "npm run build && node scripts/package.js"
   },
   "devDependencies": {
+    "archiver": "^7.0.1",
     "vite": "^5.4.0"
   },
   "dependencies": {
