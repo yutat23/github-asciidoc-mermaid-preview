@@ -2,6 +2,8 @@
 
 ## MermaidをInclude
 
+違うブランチは違うmermaidになるか
+
 [mermaid]
 ....
 include::mmd/iikanji.mmd[]
